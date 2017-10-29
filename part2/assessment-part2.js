@@ -187,17 +187,40 @@ function frodo(startingHungerValue, startingDangerValue){
 
   return {
     dinnerOverFire: function(){
-      h = h - 12.5;
-      d = d + 12.5;
-      console.log(h);
+      h = h - 25;
+      d = d + 40;
+      if(h < 0){
+        h = 0;
+      }
+      if (h > 100){
+        h = 100;
+      }
+      if ( d < 0){
+        d = 0;
+      }
+      if ( d > 100){
+        d = 100
+      }
       return{
         hunger: h,
         danger: d
       }
     },
     hidingInBush: function(){
-      h = h + 20;
+      h = h + 35;
       d = d - 20;
+      if(h < 0){
+        h = 0;
+      }
+      if (h > 100){
+        h = 100;
+      }
+      if ( d < 0){
+        d = 0;
+      }
+      if ( d > 100){
+        d = 100
+      }
       return{
         hunger: h,
         danger: d
